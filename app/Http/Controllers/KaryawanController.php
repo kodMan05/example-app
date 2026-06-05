@@ -11,8 +11,9 @@ class KaryawanController extends Controller
 
     public function index()
     { 
-        $karyawan = DB::table('karyawan')->get();
-        return view('index', ['karyawan' => $karyawan]);
+        $karyawan = DB::table('karyawan')->get(); 
+
+        return view('index', compact('karyawan'));
     }
 
     
